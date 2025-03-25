@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, FlaskRound as Flask, Brain, Pill } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -173,12 +174,11 @@ const Projects = () => {
               I'm always open to discussing research opportunities and
               innovative pharmaceutical projects.
             </p>
-            <a
-              href="/contact"
-              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
-            >
-              Get in Touch
-            </a>
+            <Link to="/contact">
+              <span className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                Get in Touch
+              </span>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
