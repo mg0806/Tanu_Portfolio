@@ -173,12 +173,17 @@ const Projects = () => {
               I'm always open to discussing research opportunities and
               innovative pharmaceutical projects.
             </p>
-            <a
-              href="/contact"
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
               className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
             >
               Get in Touch
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </div>
